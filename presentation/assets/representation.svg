@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Created with matplotlib (https://matplotlib.org/) -->
+<svg height="345.6pt" version="1.1" viewBox="0 0 460.8 345.6" width="460.8pt" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <style type="text/css">
+*{stroke-linecap:butt;stroke-linejoin:round;}
+  </style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 345.6 
+L 460.8 345.6 
+L 460.8 0 
+L 0 0 
+z
+" style="fill:transparent;"/>
+  </g>
+  <g id="axes_1">
+   <g id="line2d_1">
+    <path clip-path="url(#pd8de0374ab)" d="M 162.096611 345.6 
+L 162.096611 0 
+" style="fill:none;stroke:#363737;stroke-dasharray:3,2;stroke-dashoffset:0;"/>
+   </g>
+   <g id="line2d_2">
+    <path clip-path="url(#pd8de0374ab)" d="M 298.703389 345.6 
+L 298.703389 0 
+" style="fill:none;stroke:#363737;stroke-dasharray:3,2;stroke-dashoffset:0;"/>
+   </g>
+   <g id="PathCollection_1">
+    <defs>
+     <path d="M 0 5 
+C 1.326016 5 2.597899 4.473168 3.535534 3.535534 
+C 4.473168 2.597899 5 1.326016 5 0 
+C 5 -1.326016 4.473168 -2.597899 3.535534 -3.535534 
+C 2.597899 -4.473168 1.326016 -5 0 -5 
+C -1.326016 -5 -2.597899 -4.473168 -3.535534 -3.535534 
+C -4.473168 -2.597899 -5 -1.326016 -5 0 
+C -5 1.326016 -4.473168 2.597899 -3.535534 3.535534 
+C -2.597899 4.473168 -1.326016 5 0 5 
+z
+" id="m2d4774dcd5" style="stroke:#0165fc;"/>
+    </defs>
+    <g clip-path="url(#pd8de0374ab)">
+     <use style="fill:#0165fc;stroke:#0165fc;" x="25.489833" xlink:href="#m2d4774dcd5" y="20.249291"/>
+     <use style="fill:#0165fc;stroke:#0165fc;" x="162.096611" xlink:href="#m2d4774dcd5" y="142.289858"/>
+     <use style="fill:#0165fc;stroke:#0165fc;" x="298.703389" xlink:href="#m2d4774dcd5" y="203.310142"/>
+     <use style="fill:#0165fc;stroke:#0165fc;" x="435.310167" xlink:href="#m2d4774dcd5" y="325.350709"/>
+    </g>
+   </g>
+   <g id="line2d_3">
+    <path clip-path="url(#pd8de0374ab)" d="M 25.489833 20.249291 
+L 162.096611 142.289858 
+L 298.703389 203.310142 
+L 435.310167 325.350709 
+" style="fill:none;stroke:#0165fc;stroke-linecap:square;stroke-width:3;"/>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pd8de0374ab">
+   <rect height="345.6" width="460.8" x="0" y="0"/>
+  </clipPath>
+ </defs>
+</svg>
