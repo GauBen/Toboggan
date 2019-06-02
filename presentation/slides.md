@@ -4,11 +4,13 @@ paginate: true
 ---
 
 <!-- _paginate: false  -->
-<!-- _class: lead  -->
+<!-- _class: lead codeline -->
 
 # Gautier Ben Aïm
 ## La Brachistochrone Réelle
 *Informatique et Physique*
+
+Numéro d'inscription : 2163
 
 ---
 
@@ -27,7 +29,7 @@ paginate: true
 
 ---
 
-# Plan de la présentation
+# Sommaire
 1. Création de l'algorithme
 2. Construction du meilleur toboggan
 
@@ -167,12 +169,8 @@ Ligne 346
 
 ---
 
-<!-- _class: codeline -->
-
 # Merci de votre attention
 Vous avez des questions ?
-
-[tobog.ga](http://tobog.ga)
 
 ---
 
