@@ -144,9 +144,7 @@ def diviser(toboggan, nb_points):
     return longueur, hauteur, points
 
 
-def generer_incrementeur(
-    evaluateur, nb_points=16, facteur_nb_points=2, pas=0.001, facteur_pas=0.1
-):
+def generer_incrementeur(evaluateur, nb_points, facteur_nb_points, pas, facteur_pas):
     """
     Renvoie une fonction qui permet de passer à la génération suivante.
 
@@ -168,7 +166,7 @@ def generer_incrementeur(
             raise Exception("Le candidat proposé ne fonctionne pas")
         return meilleur_candidat, meilleur_score, calculer_score
 
-    def incrementer_generation(generation, meilleur_candidat, meilleur_score=None):
+    def incrementer_generation(generation, meilleur_candidat, meilleur_score):
         """ Passe à la génération suivante. """
         if generation == 0:
             return premiere_generation(meilleur_candidat)
@@ -193,28 +191,28 @@ def generer_incrementeur(
 
 def evoluer(
     toboggan,
-    incrementer_generation,
     nb_generations,
+    generation_suivante,
+    incrementer_generation,
+    periode_lisser,
     signaler_fin,
     rafraichir=None,
-    periode_lisser=8,
-    generation_suivante=150,
 ):
     """
     Améliore itérativement le toboggan donné en argument.
 
     toboggan               : triplet
-    incrementer_generation : fonction, appelée au changement de génération
     nb_generations         : entier, maximum de modifications des paramètres
+    generation_suivante    : entier, individus à tester avant de passer
+    incrementer_generation : fonction, appelée au changement de génération
+    periode_lisser         : entier, période entre deux lissages
     signaler_fin           : fonction, commande l'arrêt de la fonction
     rafraichir             : fonction, appelée à chaque amélioration
-    periode_lisser         : entier, période entre deux lissages
-    generation_suivante    : entier, individus à tester avant de passer
     """
 
     generation = 0
     meilleur_candidat, meilleur_score, calculer_score = incrementer_generation(
-        generation, toboggan
+        generation, toboggan, None
     )
 
     # Nombre de candidats générés, dernier progrès enregistré
@@ -335,12 +333,20 @@ if __name__ == "__main__":
     # Paramètres de l'expérience
     longueur = 1.2
     hauteur = 0.5
-    nb_generations = 4
+
+    # Paramètres de l'algorithme
     nb_points = 121  # Départ + intermédiaires + arrivée
-    nb_points_initial = 16
     pas = 0.000001  # Intervalle de temps dt
+
+    nb_generations = 4
+    generation_suivante = 150
+    periode_lisser = 8
+
+    nb_points_initial = 16
+    facteur_nb_points = 2
     pas_initial = 0.0004
     facteur_pas = 0.2
+
     temps_de_calcul = int(sys.argv[1]) if len(sys.argv) >= 2 else 60
 
     def appliquer_pfd(x, y):
@@ -424,13 +430,16 @@ if __name__ == "__main__":
     # Appel de l'algorithme hybride
     toboggan = evoluer(
         ligne,
+        nb_generations,
+        generation_suivante,
         generer_incrementeur(
             calculer_score,
-            nb_points=nb_points_initial,
-            pas=pas_initial,
-            facteur_pas=facteur_pas,
+            nb_points_initial,
+            facteur_nb_points,
+            pas_initial,
+            facteur_pas,
         ),
-        nb_generations,
+        periode_lisser,
         signaler_fin,
         rafraichir,
     )

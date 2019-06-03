@@ -87,7 +87,7 @@ Ligne 111
 * Hybride
 * Progresse continuellement
 
-Ligne 229
+Ligne 227
 
 ---
 
@@ -144,7 +144,7 @@ def deriver_v(v):
 # Expression des frottements
 $$F = -0.3263 g \cos \theta - 0.0026 v - 0.4748 v^2$$
 
-Ligne 346
+Ligne 352
 
 ---
 
